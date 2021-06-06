@@ -1,9 +1,9 @@
 {
-  "name": "@material-ui/lab",
-  "version": "4.0.0-alpha.57",
+  "name": "beltjun/material-ui-lab",
+  "version": "4.0.0-alpha-test.57",
   "private": false,
   "author": "Material-UI Team",
-  "description": "Material-UI Lab - Incubator for Material-UI React components.",
+  "description": "Material-UI Lab - Incubator for Material-UI React components. (Modfied)",
   "main": "./src/index.js",
   "keywords": [
     "react",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mui-org/material-ui.git",
+    "url": "https://github.com/beltjun/material-ui.git",
     "directory": "packages/material-ui-lab"
   },
   "license": "MIT",
