@@ -103,6 +103,7 @@ export default function useAutocomplete(props) {
     options,
     selectOnFocus = !props.freeSolo,
     value: valueProp,
+    restoreArrowUpAndDownDefault = false,
   } = props;
 
   const id = useId(idProp);
@@ -689,14 +690,18 @@ export default function useAutocomplete(props) {
         handleOpen(event);
         break;
       case 'ArrowDown':
-        // Prevent cursor move
-        event.preventDefault();
+        if (!restoreArrowUpAndDownDefault) {
+          // Prevent cursor move
+          event.preventDefault();
+        }
         changeHighlightedIndex({ diff: 1, direction: 'next', reason: 'keyboard', event });
         handleOpen(event);
         break;
       case 'ArrowUp':
-        // Prevent cursor move
-        event.preventDefault();
+        if (!restoreArrowUpAndDownDefault) {
+          // Prevent cursor move
+          event.preventDefault();
+        }
         changeHighlightedIndex({ diff: -1, direction: 'previous', reason: 'keyboard', event });
         handleOpen(event);
         break;

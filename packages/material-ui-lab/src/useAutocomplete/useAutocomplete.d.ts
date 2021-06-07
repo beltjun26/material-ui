@@ -147,6 +147,13 @@ export interface UseAutocompleteProps<
    * It should move focus to the first option and last option, respectively.
    */
   handleHomeEndKeys?: boolean;
+
+  /**
+   * If `true`, the component will allow the default behavior of arrow up and down.
+   * By default these keys default bahaviors are prevented to keep the cursor in place
+   * while picking from autocomplete via arrow up and down
+   */
+  restoreArrowUpAndDownDefault?: boolean;
   /**
    * This prop is used to help implement the accessibility logic.
    * If you don't provide this prop. It falls back to a randomly generated id.
